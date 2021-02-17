@@ -39,14 +39,15 @@ class Home extends Component {
       result: [],
     });
     const listFractions = [100000, 50000, 20000, 10000, 5000, 2000, 1000, 500, 200, 100];
+    let intValue = parseInt(value);
     let temp = [];
     let result = [];
 
-    while (value >= 100) {
+    while (intValue >= 100) {
       for (let i = 0; i < listFractions.length; i++) {
-        if (value >= listFractions[i]) {
+        if (intValue >= listFractions[i]) {
           temp[listFractions[i]] = temp[listFractions[i]] ? temp[listFractions[i]] + 1 : 1;
-          value = value - listFractions[i];
+          intValue = intValue - listFractions[i];
         };
       };
     };
@@ -58,7 +59,7 @@ class Home extends Component {
     });
 
     console.log(result);
-    this.setState({ calcLeft: value, result: result });
+    this.setState({ calcLeft: intValue, result: result });
   };
 
   render() {
@@ -99,7 +100,7 @@ class Home extends Component {
                 value={calc}
                 name='calc'
                 placeholder='Calculator Fraction'
-                type='number'
+                type='text'
                 onChange={handleCalculatorFraction}
               />
               <table className='calc-result'>
