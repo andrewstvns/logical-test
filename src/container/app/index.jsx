@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Switch
 } from 'react-router-dom';
@@ -9,7 +9,7 @@ import Home from 'container/pages';
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path="/" component={Home} />
       </Switch>
