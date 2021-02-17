@@ -1,0 +1,11 @@
+// import mixin and variables
+@import '../../styles/helper/function',
+  '../../styles/helper/mixin',
+  '../../styles/helper/variables';
+
+.text-info {
+  font-size: 12px;
+  p {
+    margin: 0;
+  }
+}

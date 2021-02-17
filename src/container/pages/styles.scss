@@ -1,0 +1,48 @@
+// import mixin and variables
+@import '../../styles/helper/function',
+  '../../styles/helper/mixin',
+  '../../styles/helper/variables';
+
+.p-home {
+  background-color: white;
+  min-height: 100vh;
+  .home-wrapper {
+    display: table;
+    width: 100%;
+    padding: 144px 0;
+    @include small {
+      display: block;
+    }
+    .palindrome,
+    .calc-fraction {
+      display: table-cell;
+      width: 50%;
+      text-align: center;
+      padding-left: 12px;
+      padding-right: 12px;
+      @include small {
+        display: inline-block;
+        width: 100%;
+      }
+    }
+    .palindrome-result,
+    .calc-result {
+      margin-top: 40px;
+    }
+    .calc-fraction {
+      @include small {
+        margin-top: 90px;
+      }
+      .calc-result {
+        width: 100%;
+        border: 1px solid black;
+        td {
+          border: 1px solid black;
+        }
+        .text-info {
+          margin-top: 12px;
+        }
+      }
+    }
+  }
+}

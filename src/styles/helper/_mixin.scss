@@ -1,0 +1,15 @@
+/* ==========================================================================
+   MIXIN
+   ========================================================================== */
+
+@mixin medium {
+  @media only screen and (max-width: screen(medium)) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media only screen and (max-width: screen(small)) {
+    @content;
+  }
+}
