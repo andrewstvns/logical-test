@@ -43,7 +43,7 @@ class Home extends Component {
     let temp = [];
     let result = [];
 
-    while (intValue >= 100) {
+    while (intValue >= 99) {
       for (let i = 0; i < listFractions.length; i++) {
         if (intValue >= listFractions[i]) {
           temp[listFractions[i]] = temp[listFractions[i]] ? temp[listFractions[i]] + 1 : 1;
